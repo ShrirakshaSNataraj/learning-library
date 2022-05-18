@@ -67,7 +67,8 @@ There are 3 record folders each having legal records such as MOU's , Non-disclos
 6. Click on submit update to apply changes on the MOU Record Folder.
     ![](./images/image%20(13).png " ")
 
-This concludes this lab. You may now proceed to the next lab.
+ You may now [proceed to the next lab](#next).
+
 
 ## Want to Learn More?
 
