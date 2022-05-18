@@ -3,9 +3,9 @@
   "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
     {
-      "title": "Introduction",
-      "description": "This lab provides an overview of the workshops and labs (livelabs).",
-      "filename": "./intro.md"
+      "title": "Introduction to Records Disposition Program with WebCenter Content:Records ",
+      "description": "This lab shows you how to configure and set up the initial check list of WebCenter Content:Records.",
+      "filename": "./../../1-labs-git-hub-get-started-install-configure/1-labs-git-hub-get-started-install-configure.md"
     },
     {
       "title": "LiveLabs FAQ",
