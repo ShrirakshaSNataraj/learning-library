@@ -26,11 +26,7 @@
       "title": "Lab 4: Set Legal Holds on Records",
       "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
       "filename": "./../../4-set-legal-hold-on records/4-set-legal-hold-on records.md"
-    },
-    {
-      "title": "Lab 5: SetUp Multi-Step Disposition Rule",
-      "description": "This lab shows you how Multi-Step Disposition works in WebCenter Content Records.",
-      "filename": "./../../5-setup-multi-step-disposition/setup-multi-step-disposition.md"
     }
+    
   ]
 }

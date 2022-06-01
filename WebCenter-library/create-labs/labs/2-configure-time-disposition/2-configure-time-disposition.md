@@ -1,14 +1,26 @@
-# Time Based Disposition Example using Custom Trigger
+# Time based disposition Rule on Non-disclosure Agreement Record Folder
 
 ## Introduction
 
-This lab explains how to configure custom triggers and use time based disposition rule on the Non-Disclosure Record Folder.
+This lab walks you through the steps to create custom trigger for the disposition rule on Legal Documents Category.Also guides how to set up a time based disposition rule on Non-disclosure Agreement Record Folder.
+   ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
+
+Estimated Time: 20 minutes
 
 ### Objectives
 
-* Create Custom Trigger.
-* Add disposition Rule on Non-Disclosure Agreement Record Folder.
-* Create User and add record reviewer roles.
+In this lab, you will:
+* Create a Custom Trigger
+* Add disposition Rule on Non-Disclosure Agreement Record Folder
+* Create User and add record reviewer roles
+
+### Prerequisites
+
+This lab assumes you have:
+* Gone through the Introduction.
+* Completed the Initial Record Set up shown in the Introduction
+* Completed Lab 1 (Creation of retention category and record folders)
+
 
 ## Task 1: Create Custom Trigger
 
@@ -18,11 +30,11 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 
 1. Choose Records then Configure from the Top menu. Choose Retention then Triggers from the Page menu.The Configure Triggers Page opens.
 
-   ![](./images/image%20(14).png " ")
+   ![Select the option shown in this image to create custom triggers](./images/create-trigger.png "Create Trigger")
 
 2. Select the type of trigger to create (Global, Custom Direct, or Indirect). Choose Add.The Create or Edit Trigger Type Page opens.Enter an Activation Date. If not entered it is considered a dormant trigger, which can be activated later.
 
-   ![](./images/image%20(15).png " ")
+   ![This image shows the Global Trigger Create Page. Fill in the details as shown here.](./images/globaltrigger-creation-form.png "Global Trigger Create Page")
 
 3. As shown in the image above,enter the trigger name as **Year End** and the activation date.Click on Create.
 
@@ -33,7 +45,7 @@ A user can create a trigger that activates immediately, activate a trigger on a 
   
   2. Click on **Add** to add another disposition rule . From the After list select the custom trigger Year end from the list and for the retention period field select Months and give the integer value as 6.In the Do list select Expire and for the notification reviewer field select the user Mark for reviewing the record before disposition to act.
    
-     ![](./images/image%20(16).png " ")
+     ![This image shows the disposition rule create page and fill in the details as shown in this image.](./images/disposition-rule-creation-form.png "Disposition Rule Create Page")
 
   3. In the Advanced Section ,select the records folder Non-disclosure Agreement and click on Ok.
 
@@ -44,13 +56,13 @@ A user can create a trigger that activates immediately, activate a trigger on a 
   1. User with admin role can create Users and assign necessary Roles.Go to **Administration** tab and select **Admin Applets**
 
   2. Run the **User Admin** applet and click on **Add** to create the user. Add the details as shown in the image below. And go to **Roles** add rma,rmadmin role to the user .
-     ![](./images/image%20(19).png " ")
-     ![](./images/image%20(20).png " ")
+     ![This page shows the Admin Applet page from which User Admin Applet has to be chosen.](./images/admin-applets.png "Admin Applet Page")
+     ![This page shows the Edit User page where we can add roles for the particular user.](./images/edit-user-page.png "Edit User Page")
 
   3. In the main menu , Click on Aliases and select RmaReviewers.Add the user Mark by clicking on the **Add** option. 
-      ![](./images/image%20(21).png " ")
+      ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
 
-This concludes this lab. You may now proceed to the next lab.
+You may now [proceed to the next lab](#next).
 
 
 ## Acknowledgements
