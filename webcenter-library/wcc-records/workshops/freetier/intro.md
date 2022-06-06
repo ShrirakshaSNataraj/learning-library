@@ -1,4 +1,4 @@
-# Introduction to Labs and Workshops                                   
+# Introduction to Labs and Workshops
 
 The labs in this workshop walk you through all the steps to **develop workshops** for LiveLabs.
 
@@ -28,7 +28,7 @@ At Oracle, we have a GitHub project named **Oracle** which has **291** repositor
 
 ![](./images/git-hub-oracle-projects-learning-library.png " ")
 
-+ You can access the **Oracle** GitHub project using the following URL:     
++ You can access the **Oracle** GitHub project using the following URL:
   [https://github.com/oracle](https://github.com/oracle)
 
   ![](./images/git-hub-oracle-project.png " ")
@@ -39,11 +39,11 @@ At Oracle, we have a GitHub project named **Oracle** which has **291** repositor
   ![](./images/git-hub-oracle-repos.png " ")
 
 + You can access **Oracle**'s GitHub project **learning-library** repository directly using the following URL which you should bookmark as you will use it often:
-  [https://github.com/oracle/learning-library](https://github.com/oracle/learning-library)    
+  [https://github.com/oracle/learning-library](https://github.com/oracle/learning-library)
 
   ![](./images/git-hub-learning-library.png " ")
 
-  The highlighted **sample-livelabs-templates** folder contains this workshop and also the available Livelabs templates.        
+  The highlighted **sample-livelabs-templates** folder contains this workshop and also the available Livelabs templates.
 
   > **Note:** The term **learning-library** that we reference in this workshop is the GitHub repository for the **Oracle** GitHub project. It is NOT the same as **Oracle Learning Library (OLL)** used formerly in the OBE world. OLL is an online resource for content about Oracle products [https://apexapps.oracle.com/pls/apex/f?p=44785:1](https://apexapps.oracle.com/pls/apex/f?p=44785:1).
 

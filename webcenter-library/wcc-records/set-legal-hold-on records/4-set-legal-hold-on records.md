@@ -26,7 +26,7 @@ This lab assumes you have:
 
 2. Click on **Create** and give a valid name for the freeze and click on **Ok**.
 
-3. Navigate to the **Software Agreement** folder by clicking on **Browse Content** then **Retention Schedule** and select **Legal Documents** Retention category. 
+3. Navigate to the **Software Agreement** folder by clicking on **Browse Content** then **Retention Schedule** and select **Legal Documents** Retention category.
 
 4. Click on **Actions** menu on the content item shown in the image below and select **Edit** click on **Freeze**.
 
@@ -36,8 +36,8 @@ This lab assumes you have:
 
    ![Select the freeze to be applied on the Record](./images/apply-freeze.png "Apply Freeze Window")
 
-6. You can now see the pause symbol next to the Title of the Record item that shows that the record is freezed or is on a legal hold . This particular record will not go through any disposition processing until the freeze is revoked . 
-In the content information page,delete option is removed for the content item that is frozen. 
+6. You can now see the pause symbol next to the Title of the Record item that shows that the record is freezed or is on a legal hold . This particular record will not go through any disposition processing until the freeze is revoked.
+In the content information page,delete option is removed for the content item that is frozen.
 
   ![Freeze applied on the Record under Software Agreement Record Folder](./images/freeze-applied.png "Freeze Applied")
 

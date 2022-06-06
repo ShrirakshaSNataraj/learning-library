@@ -39,12 +39,12 @@ Before getting started, you should start the WebLogic server and content server.
 1. Login to Content server as an administrator and click on **Configure Records Settings** under Administration tab as shown in the image below.
     ![This image shows how to configure record settings](./images/configure-records-settings.png "Configure Records Settings ")
 
-2.  Select the software configuration as shown in the image . 
+2.  Select the software configuration as shown in the image.
       ![Select the Installation Level as shown in the image.](./images/installation-level.png "Installation Level")
       ![Features Associated with the Installation Level chosen.](./images/installation-feature.png "Installation Feature")
- 
+
     > **Note:** Restart the servers after selecting the installation settings for the changes to be applied.
-  
+
 
 3. After the installation is successfully completed ,configure the setup checklist by clicking on **Records** tab,select **Configure** option and then select **Setup Checklist**.
      ![Selecting the initial Setup checklist](./images/select-setup-checklist.png "Select SetUp CheckList ")
