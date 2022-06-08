@@ -94,6 +94,11 @@ Select the user you created in Lab 2 in the **Notify Author** section in the dis
   
 You may now [proceed to the next lab](#next).
 
+## Want to Learn More?
+
+* [Defining and Processing Dispositions ](https://docs.oracle.com/en/middleware/webcenter/content/12.2.1.4/webcenter-content-manage/defining-and-processing-dispositions.html#GUID-0827B335-BA5E-4B9C-9270-27BE4520391C)
+
+
 
 ## Acknowledgements
 

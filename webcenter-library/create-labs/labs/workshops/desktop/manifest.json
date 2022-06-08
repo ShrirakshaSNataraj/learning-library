@@ -18,12 +18,12 @@
       "filename": "./../../2-configure-time-disposition/2-configure-time-disposition.md"
     },
     {
-      "title": "Lab 3: Set Up Time&Event Based Disposition Rule for Records",
+      "title": "Lab 3: Event-time Based Disposition Rule and its processing on Records",
       "description": "This lab shows you how to configure disposition rules for records that get triggered by the occurrence of the event and waits for certain retention period before acting on the records.",
       "filename": "./../../3-configure-event-time-disposition/3-configure-event-time-disposition.md"
     },
     {
-      "title": "Lab 4: Set Legal Holds on Records",
+      "title": "Lab 4: Legal Holds on Records",
       "description": "This lab shows you how to set up legal holds on records to prevent them from disposition.",
       "filename": "./../../4-set-legal-hold-on records/4-set-legal-hold-on records.md"
     }
