@@ -1,7 +1,11 @@
 # Introduction
 
 ## About WebCenter Content Records Management
-WebCenter Content Records Management system lets you to retain and dispose Organization's content by applying disposition or retention policies on the record.Not only must content be maintained but it must also be defensibly disposed once its usefulness has expired.So Oracle WebCenter Content enables both retention and disposition of information,allowing organizations to define,manage, and execute records and retention policies for all enterprise content from a single application.
+Oracle WebCenter Content provides unified records management capability across all the
+high­value information stored within it, including website content, electronic documents,
+digital assets, and images. This enables Oracle WebCenter Content to uniquely deliver a
+complete end­to­end system for document lifecycle management – from creation or capture to
+revision to archive and disposition. Oracle WebCenter Content Records Management system lets you to retain and dispose Organization's content by applying disposition or retention policies on the record. Not only must content be maintained but it must also be defensibly disposed once its usefulness has expired. Oracle WebCenter Content enables both retention and disposition of information,allowing organizations to define,manage, and execute records and retention policies for all enterprise content from a single application.
 
 ## About this Workshop
 
