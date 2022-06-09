@@ -40,16 +40,16 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 
 
 ## Task 2: Add disposition Rule on Non-Disclosure Agreement Record Folder
-  
-  1. In the Retention Category Page , Click on Edit Disposition for Legal Documents Category . 
-  
+
+  1. In the Retention Category Page , Click on Edit Disposition for Legal Documents Category.
+
   2. Click on **Add** to add another disposition rule . From the After list select the custom trigger Year end from the list and for the retention period field select Months and give the integer value as 6.In the Do list select Expire and for the notification reviewer field select the user Mark for reviewing the record before disposition to act.
-   
+
      ![This image shows the disposition rule create page and fill in the details as shown in this image.](./images/disposition-rule-creation-form.png "Disposition Rule Create Page")
 
   3. In the Advanced Section ,select the records folder Non-disclosure Agreement and click on Ok.
 
-  4. Click on **Submit Update** to apply changes on the Non-disclosure Agreement Record folder. 
+  4. Click on **Submit Update** to apply changes on the Non-disclosure Agreement Record folder.
 
 ## Task 3: Create User and add record reviewer roles
 
@@ -59,7 +59,7 @@ A user can create a trigger that activates immediately, activate a trigger on a 
      ![This page shows the Admin Applet page from which User Admin Applet has to be chosen.](./images/admin-applets.png "Admin Applet Page")
      ![This page shows the Edit User page where we can add roles for the particular user.](./images/edit-user-page.png "Edit User Page")
 
-  3. In the main menu , Click on Aliases and select RmaReviewers.Add the user Mark by clicking on the **Add** option. 
+  3. In the main menu , Click on Aliases and select RmaReviewers.Add the user Mark by clicking on the **Add** option.
       ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
 
 You may now [proceed to the next lab](#next).
