@@ -22,7 +22,7 @@ This lab assumes you have:
 
 ## Task 1: Create Freeze
 1. Under the **Records** menu, select **Configure** option. Now select **Retention** and click on **Freeze** option.
-    ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
+   ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
 
 2. Click on **Create** and give a valid name for the freeze and click on **Ok**.
 
@@ -36,7 +36,7 @@ This lab assumes you have:
 
    ![Select the freeze to be applied on the Record](./images/apply-freeze.png "Apply Freeze Window")
 
-6. You can now see the pause symbol next to the Title of the Record item that shows that the record is freezed or is on a legal hold . This particular record will not go through any disposition processing until the freeze is revoked.
+6. You can now see the pause symbol next to the Title of the Record item that shows that the record is freezed or is on a legal hold. This particular record will not go through any disposition processing until the freeze is revoked.
 In the content information page,delete option is removed for the content item that is frozen.
 
   ![Freeze applied on the Record under Software Agreement Record Folder](./images/freeze-applied.png "Freeze Applied")

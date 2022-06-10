@@ -22,11 +22,11 @@ This lab assumes you have:
 
 ## Task 1: Add Disposition Rule
 
-1. Choose **Browse Content** then **Retention Schedules**. Select **Legal Documents** Retention Category and click on **Edit** .
+1. Choose **Browse Content** then **Retention Schedules**. Select **Legal Documents** Retention Category and click on **Edit**.
 
 2. Click on **Edit Disposition** and select **Add** to add the disposition rule. On the Disposition Rule page, select the trigger **Expired** in the Triggering Event list. In the Disposition Retention Period enter **6 months**.In the Disposition Action list, select **Archive**.
 
-3. In the advanced section,select the record folder and enter the location where you want to archive the record as shown in the image below.Click **Ok**.
+3. In the advanced section, select the record folder and enter the location where you want to archive the record as shown in the image below.Click **Ok**.
      ![Fill in the details as shown in this image to add the disposition rule for the Software Agreement Record Folder](./images/add-disposition-rule.png "Edit Disposition Rule")
 
 
