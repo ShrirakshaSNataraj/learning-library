@@ -3,9 +3,25 @@
   "help": "livelabs-help-db_us@oracle.com",
 	"tutorials": [
     {
+<<<<<<< HEAD
       "title": "Introduction to Records Disposition Program with WebCenter Content:Records ",
       "description": "This lab shows you how to configure and set up the initial check list of WebCenter Content:Records.",
       "filename": "./../../1-labs-git-hub-get-started-install-configure/1-labs-git-hub-get-started-install-configure.md"
+=======
+      "title": "Introduction",
+      "description": "This lab provides an overview of the workshops and labs (livelabs).",
+      "filename": "../../0-introduction/0-introduction.md"
+    },
+    {
+      "title": "Introduction to Oracle GitHub Project and learning-library Repository",
+      "description": "This lab provides an overview of the Oracle GitHub Project and learning-library Repository (livelabs).",
+      "filename": "../../0-introduction/0a-github-introduction.md"
+    },
+    {
+      "title": "Introduction to LiveLabs Workshop Workflow",
+      "description": "This lab provides an overview of livelabs workflow (livelabs).",
+      "filename": "../../0-introduction/0b-livelabs-workflows.md"
+>>>>>>> upstream/master
     },
     {
       "title": "LiveLabs FAQ",
@@ -38,14 +54,9 @@
       "filename": "./../../4-labs-github-merge-commit-pullrequest/4-labs-github-merge-commit-pullrequest.md"
     },
     {
-      "title": "Optional Lab 5: Add GitHub Hosted Labs and Workshop to OHC",
-      "description": "This lab shows you how to to use Oracle Learning Library (OLL) administration tools to manage links and how to add a link to an OHC page.",
-      "filename": "./../../5-labs-add-git-hub-hosted-tutorials-to-ohc/5-labs-add-git-hub-hosted-tutorials-to-ohc.md"
-    },
-    {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-freetier.md"
+      "filename":"./../../need-help/need-help.md"
     }
   ]
 }

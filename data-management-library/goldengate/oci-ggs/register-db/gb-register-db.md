@@ -27,7 +27,7 @@ First, follow the steps below to register the source Oracle Autonomous Transacti
 
     ![Registered Databases in GoldenGate menu](images/01-02-ggs-registerdb.png " ")
 
-3.  Click **Register Database**.
+3.  Click **Register database**.
 
     ![Registered Databases page](images/01-03-ggs-registerdb.png " ")
 
@@ -59,31 +59,31 @@ Oracle Autonomous Databases come with a GGADMIN user that is locked by default. 
 
     ![Autonomous Transaction Processing page](images/02-02.png " ")
 
-3.  On the SourceATP Database Details page, click **Tools**, and then click **Open Database Actions**.
+3.  On the SourceATP Database Details page, click **Database Actions**.
 
     ![SourceATP Database Details page](images/02-03-db-tools.png " ")
 
-4.  Sign in to Database Actions using the ADMIN user details from Lab 1: Set Up the Environment. If you're running this lab as a workshop, copy the ADMIN password provided with your lab environment details.
+    > **Note:** *If you're prompted to log in to Database Actions, use the SourceATP admin credentials located in the Workshop Details.*
 
-5.  Under **Administration**, click **Database Users**.
+4.  Under **Administration**, click **Database Users**.
 
-    ![Database Actions](images/02-05.png " ")
+    ![Database Actions](images/database-actions.png " ")
 
-6.  From the list of users, locate **GGADMIN**, and then click the ellipsis (three dots) icon and select **Edit**.
+5.  From the list of users, locate **GGADMIN**, and then click the ellipsis (three dots) icon and select **Edit**.
 
     ![Database users](images/02-06-locked.png)
 
-7.  In the Edit User panel, deselect **Account is Locked**, enter the password you gave the ggadmin user in the database registration steps above, and then click **Apply Changes**.
+6.  In the Edit User panel, deselect **Account is Locked**, enter the password you gave the ggadmin user in the database registration steps above (Lab 1, Task 1, Step 14), and then click **Apply Changes**. Note that the user icon changes from a padlock to a checkmark.
 
     ![Edit user](images/02-07-edit.png)
 
-    Note that the user icon changes from a padlock to a checkmark.
+>**Note:** If you encounter errors when entering the password, please make sure your password contains only upper case letters, lower case letters, numbers, and underscores. If you are using the green button (run on LiveLabs tenancy), you can use your database admin password given to you on the reservation page. Just make sure this password matches the ggadmin user's password.
 
-8.  Open the navigation menu (hamburger icon), and then under **Development**, select **SQL**.
+7.  Open the navigation menu (hamburger icon), and then under **Development**, select **SQL**.
 
     ![Open navigation menu](images/01-08-sql.png)
 
-9.  Enter the following into the Worksheet, and then click **Run Statement**.
+8.  Enter the following into the Worksheet, and then click **Run Statement**.
 
     ```
     <copy>ALTER PLUGGABLE DATABASE ADD SUPPLEMENTAL LOG DATA;</copy>
@@ -92,10 +92,7 @@ Oracle Autonomous Databases come with a GGADMIN user that is locked by default. 
 9.  Replace the supplemental logging script with the following to check support mode, and then click **Run Statement**:
 
     ```
-    <copy>set pagesize 50
-    alter session set container=pdbeast;
-    column object_name format a40
-    column support_mode format a8 heading 'Support|Mode'
+    <copy>
     select * from DBA_GOLDENGATE_SUPPORT_MODE where owner = 'SRC_OCIGGLL';
     </copy>
     ```
@@ -140,5 +137,5 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Jenny Chan, Consulting User Assistance Developer, Database User Assistance
-* **Contributors** -  Denis Gray, Database Product Management
-* **Last Updated By/Date** - Jenny Chan, February 2022
+* **Contributors** -  Denis Gray, Database Product Management; Arabella Yao, Database Product Management
+* **Last Updated By/Date** - Arabella Yao, April 2022
