@@ -1,7 +1,7 @@
 # Event and Time based disposition rule on Software Agreement Record Folder
 
 ## Introduction
-This lab will show you the steps needed to check-in content item in Software Agreement Record Folder and after the content is expired goes through an approval workflow and gets archived to the file location specified.
+This lab will show you how to check-in a content item into the Software Agreement Record Folder and how the item is archived to the file location specified once the content has expired and goes through an approval workflow.
 
 Estimated Time: 30 minutes
 
