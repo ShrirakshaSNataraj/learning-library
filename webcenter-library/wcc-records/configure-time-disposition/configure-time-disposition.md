@@ -42,6 +42,8 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 ## Task 2: Add disposition Rule on Non-Disclosure Agreement Record Folder
 
   1. In the Retention Category Page , Click on Edit Disposition for Legal Documents Category.
+      
+      ![This image shows the edit disposition option to select to add the disposition rule](./images/edit-disposition.png "Edit Disposition")
 
   2. Click on **Add** to add another disposition rule . From the After list select the custom trigger Year end from the list and for the retention period field select Months and give the integer value as 6.In the Do list select Expire and for the notification reviewer field select the user Mark for reviewing the record before disposition to act.
 
@@ -58,6 +60,8 @@ A user can create a trigger that activates immediately, activate a trigger on a 
   2. Run the **User Admin** applet and click on **Add** to create the user. Add the details as shown in the image below. And go to **Roles** add rma,rmadmin role to the user .
      ![This page shows the Admin Applet page from which User Admin Applet has to be chosen.](./images/admin-applets.png "Admin Applet Page")
      ![This page shows the Edit User page where we can add roles for the particular user.](./images/edit-user-page.png "Edit User Page")
+     ![This page shows the Roles page to add the role for the user.](./images/add-role.png "Add Role Page")
+     ![This shows the list of roles that can be selected to add to the user](./images/select-role.png "Select Role Page")
 
   3. In the main menu , Click on Aliases and select RmaReviewers.Add the user Mark by clicking on the **Add** option.
       ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
