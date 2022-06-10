@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to create custom trigger for the disposition rule on Legal Documents Category.Also guides how to set up a time based disposition rule on Non-disclosure Agreement Record Folder.
+This lab will show you how to create a custom trigger for the disposition rule on the Legal Documents Category. Additionally, you will learn how to set up a time based disposition rule on the Non-disclosure Agreement Record Folder.
    ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
 Estimated Time: 20 minutes
@@ -24,19 +24,19 @@ This lab assumes you have:
 
 ## Task 1: Create Custom Trigger
 
-Global triggers have an activation date. The activation date can be a past, present, or future date. A user can create a trigger and delay the activation of a trigger for an indefinite amount of time until activation is required. In essence this is a dormant trigger, which does not contain an activation date.
+Global trigger is a type of custom trigger which happens at a time defined by an administrator. Global triggers have an activation date. The activation date can be a past, present, or future date. A user can create a trigger and delay the activation of a trigger for an indefinite amount of time until activation is required. In essence this is a dormant trigger, which does not contain an activation date.
 
 A user can create a trigger that activates immediately, activate a trigger on a certain date and time, or delay the activation of a trigger for an indefinite amount of time until activation is required.
 
-1. Choose Records then Configure from the Top menu. Choose Retention then Triggers from the Page menu.The Configure Triggers Page opens.
+1. Choose Records then Configure from the Top menu. Choose Retention then Triggers from the Page menu. The Configure Triggers Page opens.
 
    ![Select the option shown in this image to create custom triggers](./images/create-trigger.png "Create Trigger")
 
-2. Select the type of trigger to create (Global, Custom Direct, or Indirect). Choose Add.The Create or Edit Trigger Type Page opens.Enter an Activation Date. If not entered it is considered a dormant trigger, which can be activated later.
+2. Select the type of trigger to create (Global, Custom Direct, or Indirect). Choose Add. The Create or Edit Trigger Type Page opens. Enter an Activation Date (If not entered it is considered a dormant trigger, which can be activated later).
 
    ![This image shows the Global Trigger Create Page. Fill in the details as shown here.](./images/globaltrigger-creation-form.png "Global Trigger Create Page")
 
-3. As shown in the image above,enter the trigger name as **Year End** and the activation date.Click on Create.
+3. As shown in the image above,enter the trigger name as **Year End** and the activation date. Once done click on Create.
 
 
 ## Task 2: Add disposition Rule on Non-Disclosure Agreement Record Folder
