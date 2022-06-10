@@ -32,12 +32,12 @@ This lab assumes you have:
 
 ## Task 2: Check-In Content Item to Software Agreement Record Folder
 
-1. Click on **Create** and select **Create Content Item** as shown in the image below. 
+1. Click on **Create** and select **Create Content Item** as shown in the image below.
     ![This image shows to select the option to create a new content item in the record folder.](./images/checkin-new-content-item.png " Check-In Content Item")
 
-2. Fill in the check-in form as shown in the image and below and select **Check In**. 
+2. Fill in the check-in form as shown in the image and below and select **Check In**.
     ![Fill in the details as shown in this image to check in new content item in the Software Agreement Record Folder](./images/checkin-form.png "Check-In Form")
-    
+
     ![Record after checking in to the Software Agreement Record Folder looks like this image shown.](./images/softwareagreementrecord.png "Software Agreement Record")
 
 3. Click on the **i** icon on the Software Agreement Record which is recently checked in to view the content information, metadata information and the life cycle information of the record to see how the disposition rule has been applied to the Software Agreement record.
@@ -58,13 +58,13 @@ This lab assumes you have:
 
 ## Task 3: Pending Disposition Workflow
 
-1. Now that the disposition rule is processed it goes through a workflow process before the disposition action acts on the Record.Follow the Create User Task shown in Lab 2 and assigning roles and alias to the user from the same lab. 
-Select the user you created in Lab 2 in the **Notify Author** section in the disposition rule page shown above. 
+1. Now that the disposition rule is processed it goes through a workflow process before the disposition action acts on the Record.Follow the Create User Task shown in Lab 2 and assigning roles and alias to the user from the same lab.
+Select the user you created in Lab 2 in the **Notify Author** section in the disposition rule page shown above.
 
 > **Note:**Pending events and review cycles are processed by the system every night on a 24-hour cycle. Notifications are sent daily at midnight.Use the **Batch Services** options on the Records menu to process certain actions immediately rather than wait for the scheduled processing time. Options on the Batch menu include as shown in the image below . Select **Run All** or you can run individual options too such as **Process Dispostions** and **Process Reviews** . By performing this step , the user gets notified of the Pending Approvals.
    ![Run batch services to get notified of the Pending Approval Notification](./images/run-batch-services.png "Run Batch Services Option")
 
-2. To check the Pending Approvals for Disposition, Click on **My Content Server** and select **My Records Assignments** 
+2. To check the Pending Approvals for Disposition, Click on **My Content Server** and select **My Records Assignments**
     ![Select My Records Assignments highlighted in rectangular box to check the pending disposition approvals](./images/pending-approvals.png "Pending Approval Page")
 
     Another way to see the Pending Approvals is by selecting **Records** menu and click on **Approvals** and then select either **Pending Dispositions** or **Pending Reviews**.
@@ -90,8 +90,7 @@ Select the user you created in Lab 2 in the **Notify Author** section in the dis
 
 ![Three different type of disposition rules acted on three different record folders under the same Retention Category. The image shows the overview of the disposition rules.](./images/overview-of-entire-disposition-rule.png "Disposition Rules")
 
-  
-  
+
 You may now [proceed to the next lab](#next).
 
 ## Want to Learn More?
