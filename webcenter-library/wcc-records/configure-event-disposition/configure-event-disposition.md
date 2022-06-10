@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab walks you through the steps to configure the series,retention category and respective record folders shown in the architecture diagram below.This lab also sets the disposition rule on the **Legal Documents** category for the **MOU** record folder.
+In this lab you will learn about the steps needed to configure the series,retention category and respective record folders shown in the architecture diagram below.This lab also sets the disposition rule on the **Legal Documents** category for the **MOU** record folder.
 
   ![Workshop Architecture](./images/workshop-architecture.png "Workshop Architecture")
 
