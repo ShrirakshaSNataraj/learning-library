@@ -53,13 +53,13 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 
 ## Task 3: Create User and add record reviewer roles
 
-  1. User with admin role can create Users and assign necessary Roles.Go to **Administration** tab and select **Admin Applets**
+  1. User with admin role can create Users and assign necessary Roles. Go to **Administration** tab and select **Admin Applets**
 
   2. Run the **User Admin** applet and click on **Add** to create the user. Add the details as shown in the image below. And go to **Roles** add rma,rmadmin role to the user .
      ![This page shows the Admin Applet page from which User Admin Applet has to be chosen.](./images/admin-applets.png "Admin Applet Page")
      ![This page shows the Edit User page where we can add roles for the particular user.](./images/edit-user-page.png "Edit User Page")
 
-  3. In the main menu , Click on Aliases and select RmaReviewers.Add the user Mark by clicking on the **Add** option.
+  3. In the main menu , Click on Aliases and select RmaReviewers. Add the user Mark by clicking on the **Add** option.
       ![This page shows how to add the user to the alias group RmaReviewers.](./images/add-user-to-aliasgroup.png "Alias Page ")
 
 You may now [proceed to the next lab](#next).
