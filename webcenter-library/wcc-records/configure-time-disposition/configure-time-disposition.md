@@ -41,9 +41,9 @@ A user can create a trigger that activates immediately, activate a trigger on a 
 
 ## Task 2: Add disposition Rule on Non-Disclosure Agreement Record Folder
 
-  1. In the Retention Category Page , Click on Edit Disposition for Legal Documents Category.
+  1. In the Retention Category Page, Click on Edit Disposition for Legal Documents Category.
 
-  2. Click on **Add** to add another disposition rule . From the After list select the custom trigger Year end from the list and for the retention period field select Months and give the integer value as 6.In the Do list select Expire and for the notification reviewer field select the user Mark for reviewing the record before disposition to act.
+  2. Click on **Add** to add another disposition rule. From the After list select the custom trigger Year end from the list and for the retention period field select Months and give the integer value as 6. In the Do list select Expire and for the notification reviewer field select the user Mark for reviewing the record before disposition to act.
 
      ![This image shows the disposition rule create page and fill in the details as shown in this image.](./images/disposition-rule-creation-form.png "Disposition Rule Create Page")
 
