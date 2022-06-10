@@ -1,7 +1,7 @@
 # Legal Hold on Records
 
 ## Introduction
-This lab walks you through the freeze functionality in WebCenter Records Management that inhibits the record to undergo disposition processing.
+This lab walks you through the freeze functionality of WebCenter Records Management that inhibits the record to undergo disposition processing.
 
 
 Estimated Time: 15 minutes
@@ -21,8 +21,8 @@ This lab assumes you have:
 
 
 ## Task 1: Create Freeze
-1. Under the **Records** menu, select **Configure** option.Now select **Retention** and click on **Freeze** option.
-   ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
+1. Under the **Records** menu, select **Configure** option. Now select **Retention** and click on **Freeze** option.
+    ![Selecting the freeze option from the Records Menu](./images/create-freeze.png "Create Freeze")
 
 2. Click on **Create** and give a valid name for the freeze and click on **Ok**.
 
