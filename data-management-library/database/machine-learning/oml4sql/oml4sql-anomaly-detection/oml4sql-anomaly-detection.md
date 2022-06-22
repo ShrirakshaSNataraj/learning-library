@@ -1,4 +1,4 @@
-# Oracle Machine Learning for SQL (OML4SQL)
+# Detect anomalies with OML4SQL using one-class support vector machine (SVM)
 
 ## Introduction
 
@@ -15,7 +15,7 @@ In this workshop, you have a dataset representing 15k customers of an insurance 
 
 For more information about [OML4SQL API Guide](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/21/dmapi/introduction-to-oml4sql.html#GUID-429CF74D-C4B7-4302-9C33-5292A664E2AD).
 
-Estimated Lab Time: 2 hours.
+Estimated Time: 2 hours.
 
 ### Objectives
 
@@ -35,9 +35,10 @@ In this lab, you will:
 
 ### Prerequisites
 
-* Oracle Database 21c installed on-premise.
-* Access the Oracle database containing the customer insurance table and run the scripts to configure the user and prepare data.
+* Oracle Database 21c installed.
+* Access the Oracle database containing the customer insurance table and run the scripts to configure the user and prepare data. The virtual machine used for this lab is the same VM that was used in the OML4PY Workshop of the previous lab.
 * SSH private key with which you created your VM on OCI.
+
 
 ## Task 1: Business Understanding
 
@@ -47,11 +48,11 @@ In this lab, you will:
 
 * Data information of insurance clients is like this:
 
-![cust_insur_ltv-table](../oml4sql-anomaly-detection/images/cust-insur-ltv-table.png)
+  ![cust-insur-ltv-table](../oml4sql-anomaly-detection/images/cust-insur-ltv-table.png)
 
 * Sample of single record is like this:
 
-![single-record-sample](../oml4sql-anomaly-detection/images/single-record.png)
+  ![single-record-sample](../oml4sql-anomaly-detection/images/single-record.png)
 
 * The most important field in this use case, is BUY_INSURANCE, because businesses need to know who is their buyer persona typical and atypical.
 
@@ -60,57 +61,55 @@ In this lab, you will:
 1. It is recommended to have SQL Developer installed on your host machine so that you can interact with the data in a more friendly way. You need access to remote desktop with novnc link that you copied from of Resource Manager/Stacks/Stack Details/Application Information/Remote Desktop/copy, once you enter in the VM remote, you need open a Linux terminal and execute the command  ". setEnv" and wait for that start database service, If it asks you to replace the scripts in the terminal type A for all questions.
 To see the service name, open other Linux Terminal and execute lsnrctl status command.    
 
-* You can download here [SQL Developer Download](https://www.oracle.com/tools/downloads/sqldev-downloads.html).
+   You can download here [SQL Developer Download](https://www.oracle.com/tools/downloads/sqldev-downloads.html).
 
 2. Once installed SQL Developer, you need to configure the remote connection in SSH Hosts of SQL Developer feature, following these instructions:
 
-![view-SSH-Hosts](../oml4sql-anomaly-detection/images/view-ssh.png)
+  ![view-SSH-Hosts](../oml4sql-anomaly-detection/images/view-ssh.png)
 
-3. Right clic on SSH Hots and then do clic in New SSH Host, write values in each field and then clic Ok. The public and private IP can be obtained from OCI, entering Compute/Instances and you will be able to see and copy this data.
+3. Right click on SSH Hosts and then click New SSH Host, write values in each field and then click Ok. The public and private IP can be obtained from OCI, entering Compute/Instances and you will be able to see and copy this data.
 
-![ssh-remote-host](../oml4sql-anomaly-detection/images/ssh-remote-host.png)
+  ![ssh-remote-host](../oml4sql-anomaly-detection/images/ssh-remote-host.png)
 
-4. Right clic on the first oml4sql tab in SSH Hosts an clic connect, and then right clic in the submenu oml4sql tab an clic connect.
-Notice how the small padlock closes in both options, which represents that you are already remotely connected to your VM and you are ready to create a connection to your
+4. Right click on the first oml4sql tab in SSH Hosts an click connect, and then right click in the submenu oml4sql tab an click connect.
+Notice how the small padlock closes in both options, which represents that you are already remotely connected to your VM and you are ready to create a connection to your schema from SQL Developer.
 
-5. schema from SQL Developer.
+  ![conection-ssh](../oml4sql-anomaly-detection/images/conection-ssh.png)
 
-![conection-ssh](../oml4sql-anomaly-detection/images/conection-ssh.png)
+5. Create SQL Developer new database connection with **SYS** user to your Oracle 21c Pluggable Database, and test connectivity with password: **MLlearnPTS#21_** and service name: mlpdb1.livelabs.oraclevcn.com
 
-6. Create SQL Developer new database connection with **SYS** user to your Oracle 21c Pluggable Database, and test connectivity with password: **MLlearnPTS#21_** and service name: mlpdb1.livelabs.oraclevcn.com
+  ![database-connection](../oml4sql-anomaly-detection/images/database-connection.png)
 
-![Database-connection-SYS](../oml4sql-anomaly-detection/images/database-connection-sys.png)
-
-7. Once the database connection is open and SQL Developer Worksheet is ready, execute this script to create the user oml4sql_user and grant privileges to work with OML4SQL API, and generate a copy of table CUST_INSUR_LTV.
+6. Once the database connection is open and SQL Developer Worksheet is ready, execute this script to create the user oml4sqluser and grant privileges to work with OML4SQL API, and generate a copy of table CUST\_INSUR\_LTV.
 
     ````
     <copy>
-    DROP USER oml4sql_user;
+    DROP USER oml4sqluser;
 
-	CREATE USER oml4sql_user IDENTIFIED BY oml4sql_user
+	CREATE USER oml4sqluser IDENTIFIED BY oml4sqluser
        DEFAULT TABLESPACE USERS
        TEMPORARY TABLESPACE TEMP
        QUOTA UNLIMITED ON USERS;
 
-	GRANT CREATE SESSION TO oml4sql_user;
-	GRANT CREATE TABLE TO oml4sql_user;
-	GRANT CREATE VIEW TO oml4sql_user;
-	GRANT CREATE MINING MODEL TO oml4sql_user;
-	GRANT EXECUTE ON CTXSYS.CTX_DDL TO oml4sql_user;
-	GRANT SELECT ANY MINING MODEL TO oml4sql_user;
+	GRANT CREATE SESSION TO oml4sqluser;
+	GRANT CREATE TABLE TO oml4sqluser;
+	GRANT CREATE VIEW TO oml4sqluser;
+	GRANT CREATE MINING MODEL TO oml4sqluser;
+	GRANT EXECUTE ON CTXSYS.CTX_DDL TO oml4sqluser;
+	GRANT SELECT ANY MINING MODEL TO oml4sqluser;
 
-	GRANT SELECT ON OML_USER.CUST_INSUR_LTV TO oml4sql_user;
-	CREATE TABLE oml4sql_user.CUST_INSUR_LTV AS
+	GRANT SELECT ON OML_USER.CUST_INSUR_LTV TO oml4sqluser;
+	CREATE TABLE oml4sqluser.CUST_INSUR_LTV AS
 	SELECT *
 	FROM OML_USER.CUST_INSUR_LTV;
     </copy>
     ````
 
-8. Create SQL Developer new database connection with **oml4sql_user** user to your Oracle 21c Pluggable Database, and test connectivity with password: **oml4sql_user**.
+7. Create SQL Developer new database connection with oml4sqluser user to your Oracle 21c Pluggable Database, and test connectivity with password: oml4sqluser.
 
-![oml4sql_user-connection](../oml4sql-anomaly-detection/images/oml4sql-user-connection.png)
+  ![oml4sql-user-connection](../oml4sql-anomaly-detection/images/oml4sql-user-connection.png)
 
-9. Copy and execute this script with oml4sql_user:
+8. Copy and execute this script with oml4sqluser:
 
     ````
     <copy>
@@ -148,23 +147,23 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-10. Check that there are no errors in the output of the script.
+9. Check that there are no errors in the output of the script.
 
-11. Review your settings table:
+10. Review your settings table:
 
-![settings-table](../oml4sql-anomaly-detection/images/settings-table.png)
+    ![settings-table](../oml4sql-anomaly-detection/images/settings-table.png)
 
 
 ## Task 4: Modeling
 
-* CREATE A Model with the name: SVMO\_CUST\_Class_sample
+1. CREATE A Model with the name: SVMO\_CUST\_Class_sample
   We use One-Class Support Vector Machine, Support Vector Machine (SVM) as a one-class classifier is used for detecting anomalies. Oracle Machine Learning for SQL uses SVM as the one-class classifier for anomaly detection. When SVM is used for anomaly detection, it has the classification machine learning function but no target.
 
   One-class SVM models, when applied, produce a prediction and a probability for each case in the scoring data. If the prediction is 1, the case is considered typical. If the prediction is 0, the case is considered anomalous. This behavior reflects the fact that the model is trained with normal data.
 
   Note the NULL specification for target column name.
 
-* For more information about SVM in Oracle check this link: [Support Vector Machine](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/21/dmcon/support-vector-machine.html#GUID-FD5DF1FB-AAAA-4D4E-84A2-8F645F87C344).
+  For more information about SVM in Oracle, check this link: [Support Vector Machine](https://docs.oracle.com/en/database/oracle/machine-learning/oml4sql/21/dmcon/support-vector-machine.html#GUID-FD5DF1FB-AAAA-4D4E-84A2-8F645F87C344).
 
     ````
     <copy>
@@ -181,7 +180,7 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-* DISPLAY MODEL SETTINGS
+2. DISPLAY MODEL SETTINGS
 
     ````
     <copy>
@@ -192,9 +191,9 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-![settings-model](../oml4sql-anomaly-detection/images/settings-model.png)
+    ![settings-model](../oml4sql-anomaly-detection/images/settings-model.png)
 
-* Review your model attributes. DISPLAY MODEL SIGNATURE
+3. Review your model attributes. DISPLAY MODEL SIGNATURE
 
     ````
     <copy>
@@ -205,9 +204,9 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-![model-attributesl](../oml4sql-anomaly-detection/images/model-attributes.png)
+    ![model-attributesl](../oml4sql-anomaly-detection/images/model-attributes.png)
 
-* Review your model details. Model details are available only for SVM models with linear kernel.
+4. Review your model details. Model details are available only for SVM models with linear kernel.
 
     ````
     <copy>
@@ -228,9 +227,9 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-![model-details](../oml4sql-anomaly-detection/images/model-details.png)
+    ![model-details](../oml4sql-anomaly-detection/images/model-details.png)
 
-* Review your model views that are generated.
+5. Review your model views that are generated.
 
     ````
     <copy>
@@ -240,18 +239,18 @@ Notice how the small padlock closes in both options, which represents that you a
     </copy>
     ````
 
-![model-views](../oml4sql-anomaly-detection/images/model-views.png)
+    ![model-views](../oml4sql-anomaly-detection/images/model-views.png)
 
 ## Task 5: Evaluation
 
-* APPLY THE MODEL
+APPLY THE MODEL
 
-Depending on the business case, the model can be scored against the build data (e.g, business cases 1 and 2) or against new, previously unseen data (e.g., business case 3). New apply data needs to undergo the same transformations as the build data (see business case 3).
+* Depending on the business case, the model can be scored against the build data (e.g, business cases 1 and 2) or against new, previously unseen data (e.g., business case 3). New apply data needs to undergo the same transformations as the build data (see business case 3).
 
 
-* BUSINESS CASE 1
+BUSINESS CASE 1
 
-Find the top 5 outliers - customers that differ the most from  the rest of the population. Depending on the application, such  atypical customers can be removed from the data (data cleansing). Explain which attributes cause them to appear different.
+* Find the top 5 outliers - customers that differ the most from  the rest of the population. Depending on the application, such  atypical customers can be removed from the data (data cleansing). Explain which attributes cause them to appear different.
 
     ````
     <copy>
@@ -268,11 +267,12 @@ Find the top 5 outliers - customers that differ the most from  the rest of the p
     </copy>
     ````
 
-![case-1](../oml4sql-anomaly-detection/images/case-1.png)
 
-* BUSINESS CASE 2
+    ![case-1](../oml4sql-anomaly-detection/images/case-1.png)
 
-Find demographic characteristics of the **typical** BUY_INSURANCE=Yes members.
+BUSINESS CASE 2
+
+* Find demographic characteristics of the **typical** BUY_INSURANCE=Yes members.
 These statistics will not be influenced by outliers and are likely to provide a more truthful picture of the population of interest than statistics computed on the entire group of insurance members. Statistics are computed on the original (non-transformed) data.
 
     ````
@@ -288,13 +288,13 @@ These statistics will not be influenced by outliers and are likely to provide a 
     </copy>
     ````
 
-![case-2](../oml4sql-anomaly-detection/images/case-2.png)
+    ![case-2](../oml4sql-anomaly-detection/images/case-2.png)
 
 ## Task 6: Deployment
 
-* BUSINESS CASE 3
+BUSINESS CASE 3
 
-Compute probability of a new/hypothetical customer being a typical BUY_INSURANCE=Yes.
+* Compute probability of a new/hypothetical customer being a typical BUY_INSURANCE=Yes.
 Necessary data preparation on the input attributes is performed automatically during model scoring since the model was build with auto data prep.
 
     ````
@@ -317,12 +317,12 @@ Necessary data preparation on the input attributes is performed automatically du
     </copy>
     ````
 
-![case-3](../oml4sql-anomaly-detection/images/case-3.png)
+    ![case-3](../oml4sql-anomaly-detection/images/case-3.png)
 
 
-* BUSINESS USE CASE 4
+BUSINESS CASE 4
 
-Identify rows that are most atypical in the input dataset.
+* Identify rows that are most atypical in the input dataset.
 Consider each type of marital status to be separate, so the most anomalous rows per married status group should be returned.
 Provide the top three attributes leading to the reason for the record being an anomaly.
 The partition by clause used in the analytic version of the prediction_probability function will lead to separate models being built and scored for each marital status.
@@ -345,9 +345,9 @@ The partition by clause used in the analytic version of the prediction_probabili
     </copy>
     ````
 
-![case-4](../oml4sql-anomaly-detection/images/case-4.png)
+    ![case-4](../oml4sql-anomaly-detection/images/case-4.png)
 
-![case-4](../oml4sql-anomaly-detection/images/case-4-2.png)
+    ![case-4](../oml4sql-anomaly-detection/images/case-4-2.png)
 
 ## Conclusion
 
@@ -356,9 +356,4 @@ With this practice, we can conclude that the SVM algorithm is very useful to sol
 
 ## Acknowledgements
 * **Authors** - Adrian Castillo Mendoza, Milton Wan, Valentin Leonard Tabacaru, Rajeev Rumale.
-* **Last Updated By/Date** -  Adrian Castillo Mendoza, February 2022.
-
-## Need Help?
-Please submit feedback or ask for help using our [LiveLabs Support Forum](https://community.oracle.com/tech/developers/categories/livelabsdiscussions). Please click the **Log In** button and login using your Oracle Account. Click the **Ask A Question** button to the left to start a *New Discussion* or *Ask a Question*.  Please include your workshop name and lab name.  You can also include screenshots and attach files.  Engage directly with the author of the workshop.
-
-If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
+* **Last Updated By/Date** -  Kamryn Vinson, April 2022.

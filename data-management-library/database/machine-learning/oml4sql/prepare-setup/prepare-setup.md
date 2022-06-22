@@ -6,7 +6,7 @@
 
 This lab will show you how to download the Oracle Resource Manager (ORM) stack zip file needed to setup the resource needed to run this workshop. This workshop requires a compute instance and a Virtual Cloud Network (VCN).
 
-*Estimated Lab Time:* 15 minutes
+*Estimated Time:* 15 minutes
 
 Watch the video below for a quick walk through of the lab.
 
@@ -18,7 +18,7 @@ Watch the video below for a quick walk through of the lab.
 
 ### Prerequisites
 This lab assumes you have:
-- An Oracle Free Tier or Paid Cloud account
+- An Oracle Cloud account
 - Have sufficient quota for in your tenancy to create VM and VCN.
 
 ## Task 1: Download Oracle Resource Manager (ORM) stack zip file
@@ -34,7 +34,7 @@ Using the details from the two steps above, proceed to the lab *Environment Setu
   -  Create Stack:  *Compute only* with an existing VCN where security lists have been updated as per *Step 2* above
   -  You need to check the option *Need Remote Access via SSH?* in the Main Configuration of the Edit Stack process, and you need to have an SSH public and private key previously, for can upload a .pub file.  
 
-You may now [proceed to the next lab](#next).
+You may now **proceed to the next lab**
 
 ## Acknowledgements
 
