@@ -24,19 +24,30 @@ In this workshop, you will:
 
 Before getting started, you should start the WebLogic server and content server.
 
-1.  Login to the demo environment. Navigate to the following directory shown below and run the command startWebLogic.cmd .
+1.  Login to the demo environment and run the following command to check the status of Weblogic Server and WebCenter Content Server.
        ```
-    <copy>C:\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\bin</copy>
+    <copy>systemctl status weblogic.service</copy>
     ```
 
-2.  Once the WebLogic is running,start the content server using the same location mentioned above and start UCM server    with the command startManagedWebLogic.cmd UCM_server1 to start the WebCenter Content Server.
-    > **Note:** Make sure to login to the database and check if the pluggable database PDBORCL is in read/write mode before starting the servers.
+2.  After running the above command in the terminal you must see the status **active(running)** as shown in the image below.
+    > **Note:** Make sure to check the status of the servers before starting the lab.
+
+![This image shows the status of the Weblogic Server.](./images/weblogic-status.png "Weblogic Server Status")
+
+3. Similarly run the following command to check the status of WebCenter Content server.
+        ```
+    <copy>systemctl status weblogic.service</copy>
+    ```
+
+![This image shows the status of the WebCenter Content server](./images/webcenter-status.png "WebCenter Content Server Status")
 
 3. Open any browser and type the following URL to access the WebCenter Content Server.
    http://localhost:16200/cs/
 
 
 ## Task 2: Install Records on UCM and configure the Setup Checklist.
+
+> **Note:** **Records** option in the menu bar indicates that there is already Records installed and configured. In that case you can skip this task and proceed to next lab if Records Initial setup is completed.
 
 
 1. Login to Content server as an administrator and click on **Configure Records Settings** under Administration tab as shown in the image below.
@@ -68,5 +79,6 @@ You may now [proceed to the next lab](#next).
 * **Authors:**
     * Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
 * **Contributors:**
-    * Shriraksha S Nataraj, Staff Solution Engineer , Oracle WebCenter Content
-* **Last Updated By/Date:** Shriraksha S Nataraj , May 2022
+    * Shriraksha S Nataraj
+    
+* **Last Updated By/Date:** Shriraksha S Nataraj , June 2022

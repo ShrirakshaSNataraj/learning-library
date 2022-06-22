@@ -105,6 +105,6 @@ You may now [proceed to the next lab](#next).
 * **Author:**
     * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors:**
-    * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
+    * Shriraksha S Nataraj
 
-* **Last Updated By/Date:** Shriraksha S Nataraj ,May 2022
+* **Last Updated By/Date:** Shriraksha S Nataraj ,June 2022

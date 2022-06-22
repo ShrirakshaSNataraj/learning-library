@@ -56,6 +56,6 @@ This concludes this lab.
 * **Author:**
     * Shriraksha S Nataraj, Staff Solution Engineer, Oracle WebCenter Content
 * **Contributors:**
-    * Shriraksha S Nataraj , Staff Solution Engineer , Oracle WebCenter Content
+    * Shriraksha S Nataraj
 
 * **Last Updated By/Date:** Shriraksha S Nataraj ,June 2022
